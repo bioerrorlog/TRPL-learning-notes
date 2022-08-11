@@ -21,4 +21,12 @@ fn main() {
 
     // let does_not_exist = &v4[100]; // panic
     let does_not_exist = v4.get(100); // None
+
+    let mut v5 = vec![1, 2, 3, 4, 5];
+    let first = &v5[0];
+
+    // cannot borrow `v5` as mutable because it is also borrowed as immutable mutable borrow occurs
+    // v5.push(6);
+
+    println!("The first element is: {}", first);
 }
