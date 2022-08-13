@@ -76,4 +76,10 @@ fn main() {
     // the type `str` cannot be indexed by `{integer}`
     let hello = "Здравствуйте";
     // let answer = &hello[0];
+
+    // ----------------------------------------
+    let hello = "Здравствуйте";
+    let s = &hello[0..4];
+    // thread 'main' panicked at 'byte index 1 is not a char boundary; it is inside 'З' (bytes 0..2) of `Здравствуйте`'
+    // let s = &hello[0..1];
 }
