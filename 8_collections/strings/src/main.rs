@@ -63,4 +63,17 @@ fn main() {
     // error[E0277]: the type `String` cannot be indexed by `{integer}`
     let s1 = String::from("hello");
     // let h = s1[0];
+
+    // ----------------------------------------
+    let len = String::from("Hola").len();
+    println!("length: {}", len);
+    // 4
+
+    let len = String::from("Здравствуйте").len();
+    println!("length: {}", len);
+    // 24
+
+    // the type `str` cannot be indexed by `{integer}`
+    let hello = "Здравствуйте";
+    // let answer = &hello[0];
 }
