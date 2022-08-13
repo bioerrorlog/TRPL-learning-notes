@@ -58,4 +58,9 @@ fn main() {
     let s3 = String::from("toe");
 
     let s = format!("{}-{}-{}", s1, s2, s3);
+
+    // ----------------------------------------
+    // error[E0277]: the type `String` cannot be indexed by `{integer}`
+    let s1 = String::from("hello");
+    // let h = s1[0];
 }
