@@ -51,4 +51,8 @@ fn main() {
     // ----------------------------------------------
     let f = File::open("hello.txt").unwrap();
     let f = File::open("hello.txt").expect("Failed to open hello.txt");
+
+    // ----------------------------------------------
+    // cannot use the `?` operator in a function that returns `()`
+    // let f = File::open("hello.txt")?;
 }
