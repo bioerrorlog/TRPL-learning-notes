@@ -1,4 +1,6 @@
 #![allow(unused)]
+use std::fmt::Display;
+
 pub trait Summary {
     fn summarize_author(&self) -> String;
 
@@ -20,11 +22,16 @@ impl Summary for NewsArticle {
     }
 }
 
-// trait bound
+// pub fn notify(item: &impl Summary) {
+//     println!("Breaking news! {}", item.summarize());
+// }
 // pub fn notify<T: Summary>(item: &T) {
 //     println!("Breaking news! {}", item.summarize());
 // }
-pub fn notify(item: &impl Summary) {
+// pub fn notify(item: &(impl Summary + Display)) {
+//     println!("Breaking news! {}", item.summarize());
+// }
+pub fn notify<T: Summary + Display>(item: &T) {
     println!("Breaking news! {}", item.summarize());
 }
 
