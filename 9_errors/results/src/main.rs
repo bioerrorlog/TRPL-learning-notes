@@ -1,6 +1,9 @@
 use std::fs::File;
 use std::io;
 use std::io::{ErrorKind, Read};
+use std::net::IpAddr;
+
+
 
 // fn read_username_from_file() -> Result<String, io::Error> {
 //     let f = File::open("hello.txt");
@@ -55,4 +58,7 @@ fn main() {
     // ----------------------------------------------
     // cannot use the `?` operator in a function that returns `()`
     // let f = File::open("hello.txt")?;
+
+    // ----------------------------------------------
+    let home: IpAddr = "127.0.0.1".parse().unwrap();
 }
