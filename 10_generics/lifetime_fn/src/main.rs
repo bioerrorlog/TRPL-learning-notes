@@ -5,6 +5,9 @@ fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
         y
     }
 }
+// fn longest<'a>(x: &'a str, y: &str) -> &'a str {
+//     x
+// }
 
 fn main() {
     let string1 = String::from("abcd");
