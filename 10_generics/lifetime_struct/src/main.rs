@@ -14,6 +14,9 @@ impl<'a> ImportantExcerpt<'a> {
 }
 
 fn main() {
+    let s: &'static str = "I have a static lifetime.";
+    // let s = "I have a static lifetime.";
+
     let novel = String::from("Call me Ishmael. Some years ago...");
     let first_sentence = novel.split('.').next().expect("Could not find a '.'");
     let i = ImportantExcerpt {
